@@ -37,7 +37,7 @@ export function Navbar() {
               <Link
                 replace
                 to={inGameBallsCount ? '#!' : '/gifts'}
-                title="Presente"
+                title="Gift"
                 className="animate-bounce text-text transition-colors hover:text-purple "
               >
                 <Gift size="32" weight="fill" />
@@ -46,7 +46,7 @@ export function Navbar() {
 
             <WalletCard balance={currentBalance} showFormatted />
             <button
-              title="Sair"
+              title="leave"
               onClick={handleSignOut}
               className="rounded-md bg-purpleDark px-4 text-text hover:bg-purple"
             >

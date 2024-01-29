@@ -22,7 +22,7 @@ export function Gifts() {
         <span className="text-purple">{formatPoints(currentBalance)}</span>{' '}
         points.
         <br />
-        Mas não se preocupe, nesta página você pode resgatar até{' '}
+        But don't worry, on this page you can redeem up to{' '}
         <span className="text-purple">300</span> Points
         <br /> each time your balance is below{' '}
         <span className="text-purple">10 PPs</span> <br />
@@ -32,7 +32,7 @@ export function Gifts() {
         onClick={handleRedeemGift}
         className="rounded-md bg-purpleDark px-4 py-2 font-bold text-text transition-colors hover:bg-purple"
       >
-        RESGATAR
+        Redeem Gift
       </button>
     </div>
   )

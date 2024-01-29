@@ -70,7 +70,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
         })
       )
     } catch (error) {
-      toast.error('Ocorreu um erro ao atualizar o saldo')
+      toast.error('An error occurred while updating the balance')
       console.error('setBalanceError', error)
     }
   },
@@ -88,7 +88,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
         })
       }
     } catch (error) {
-      toast.error('Ocorreu um erro ao atualizar o saldo')
+      toast.error('An error occurred while updating the balance')
       console.error('setBalanceOnDatabaseError', error)
     }
   },
@@ -98,16 +98,16 @@ export const useAuthStore = create<State>((setState, getState) => ({
       if (balance >= 10) {
         toast.remove()
         toast.error(
-          'Você precisa ter o saldo menor abaixo de 10 para resgatar o presente'
+          'You need to have the smallest balance below 10 to redeem the gift'
         )
         return
       }
       const newBalance = random(10, 300)
       await getState().setBalanceOnDatabase(newBalance)
-      toast.success('Presente resgatado com sucesso')
+      toast.success('Gift Successfully Redeemed')
       return
     } catch (error) {
-      toast.error('Ocorreu um erro ao resgatar o presente')
+      toast.error('An error occurred while redeeming the gift')
       console.error('redeemGiftError', error)
     }
   },
@@ -117,7 +117,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
       await getState().setBalanceOnDatabase(getState().wallet.balance + amount)
       setState(state => ({ ...state, isWalletLoading: false }))
     } catch (error) {
-      toast.error('Ocorreu um erro ao atualizar o saldo')
+      toast.error('An error occurred while updating the balance')
       console.error('incrementBalanceError', error)
     }
   },
@@ -127,7 +127,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
       await getState().setBalanceOnDatabase(getState().wallet.balance - amount)
       setState(state => ({ ...state, isWalletLoading: false }))
     } catch (error) {
-      toast.error('Ocorreu um erro ao atualizar o saldo')
+      toast.error('An error occurred while updating the balance')
       console.error('decrementBalanceError', error)
     }
   },
@@ -150,7 +150,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
       }
       setState(state => ({ ...state, isLoading: false }))
     } catch (error) {
-      toast.error('Ocorreu um erro ao fazer login')
+      toast.error('An error occurred while logging in')
       console.error('signInError', error)
     }
   },
@@ -167,7 +167,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
         })
       )
     } catch (error) {
-      toast.error('Ocorreu um erro ao fazer logout')
+      toast.error('An error occurred while logging out')
       console.error('signOutError', error)
     }
   },
@@ -181,7 +181,7 @@ export const useAuthStore = create<State>((setState, getState) => ({
         })
       )
     } catch (error) {
-      toast.error('Ocorreu um erro ao atualizar os dados do usuário')
+      toast.error('An error occurred while updating user data')
       console.error('setUserError', error)
     }
   }
