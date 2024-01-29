@@ -6,7 +6,7 @@
 
 ## How to play?
 
-> Just access the [link](https://plinko-c3972.web.app/), select your bet value and click on 'Bet', or, if you don't want to lose your points, just click directly on 'Bet' button and the game will put a new ball without value in game.
+> Just access the [http://localhost:3000/](http://localhost:3000/plinko), select your bet value and click on 'Bet', or, if you don't want to lose your points, just click directly on 'Bet' button and the game will put a new ball without value in game.
 
 ## Stacks
 
